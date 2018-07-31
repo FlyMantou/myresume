@@ -1,6 +1,8 @@
 (function () {
     //请求服务器获取 当前是第几位访问者
-    loadShareNumber();
+    //loadShareNumber();
+    //setInterval("clock()",5)
+
 
     var screenHeight = window.innerHeight;
     var now = {row: 1, col: 1}, last = {row: 0, col: 0};
@@ -46,10 +48,18 @@
             if (isAnimating) return;
             last.row = now.row;
             last.col = now.col;
-            if (last.row != 4) {
+            if (last.row !== 4) {
                 now.row = last.row + 1;
                 now.col = 1;
                 pageMove(towards.up);
+
+            }else {
+
+            }
+
+            if (last.row===1){
+                console.log("移除");
+                $("#logo_img").removeClass("move-repeat");
             }else {
 
             }
@@ -58,10 +68,17 @@
             if (isAnimating) return;
             last.row = now.row;
             last.col = now.col;
-            if (last.row != 1) {
+            if (last.row !== 1) {
                 now.row = last.row - 1;
                 now.col = 1;
                 pageMove(towards.down);
+            }else {
+
+            }
+            if (last.row===2){
+                setTimeout("clock()",5000);
+            }else {
+                $("#logo_img").removeClass("move-repeat");
             }
         }
     });
@@ -205,9 +222,13 @@
         $('#submit').text("点击生成祝福");
     });
 
+    setTimeout("clock()",5000);
 })();
 
-
+function clock(){
+    console.log("调用clock");
+    $("#logo_img").addClass("move-repeat");
+}
 
 var b = true;
 var audio = document.getElementById("musicfx");
