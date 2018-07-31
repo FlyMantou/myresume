@@ -1,475 +1,267 @@
-$(document).ready(function () {
+(function () {
+    //请求服务器获取 当前是第几位访问者
+    loadShareNumber();
 
-    var div = document.getElementById("boo");
-    VF = Vex.Flow;
-    var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-    renderer.resize(1000, 500);
-    var context = renderer.getContext();
-    var stave = new VF.Stave(10, 40, 400);
-    stave.addClef("treble").addTimeSignature("4/4");
-    stave.setContext(context).draw();
+    var screenHeight = window.innerHeight;
+    var now = {row: 1, col: 1}, last = {row: 0, col: 0};
+    towards = {up: 1, right: 2, down: 3, left: 4};
+    var isAnimating = false;
 
-    //  var voice = new VF.Voice({num_beats: 4, beat_value: 2});
-    $('#btn_quarter_note').click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 800);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-        /*var notes = [new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "q"}),
-            new VF.StaveNote({clef: "treble", keys: ["d/4"], duration: "q"}),
-            new VF.StaveNote({clef: "treble", keys: ["b/4"], duration: "qr"}),
-            new VF.StaveNote({clef: "treble", keys: ["c/4", "e/4", "g/4"], duration: "q"})
-        ];
+    s = window.innerHeight / 500;
+    ss = 250 * (1 - s);
 
-        voice.addTickables(notes);
-        var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 200);
-        voice.draw(context, stave);*/
+    $('.wrap').css('-webkit-transform', 'scale(' + s + ',' + s + ') translate(0px,-' + ss + 'px)');
 
-
-        var notes = [
-            new VF.StaveNote({
-                clef: "treble",
-                keys: ["e##/5"],
-                duration: "8d"
-            }).addAccidental(0, new VF.Accidental("##")).addDotToAll(),
-            new VF.StaveNote({clef: "treble", keys: ["b/4"], duration: "16"}).addAccidental(0, new VF.Accidental("b")),
-            new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "8"}),
-            new VF.StaveNote({clef: "treble", keys: ["d/4"], duration: "16"}),
-            new VF.StaveNote({clef: "treble", keys: ["d/4"], duration: "16"}),
-            new VF.StaveNote({clef: "treble", keys: ["d/4"], duration: "q"}),
-            new VF.StaveNote({clef: "treble", keys: ["d/4"], duration: "q"})
-        ];
-
-        var beams = VF.Beam.generateBeams(notes);
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        beams.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-
-        var ties = [
-            new VF.StaveTie({
-                first_note: notes[4],
-                last_note: notes[5],
-                first_indices: [0],
-                last_indices: [0]
-            }),
-            new VF.StaveTie({
-                first_note: notes[5],
-                last_note: notes[6],
-                first_indices: [0],
-                last_indices: [0]
-            })
-        ];
-        ties.forEach(function (t) {
-            t.setContext(context).draw()
-        })
-
-        /* var notes = [
-             new VF.StaveNote({clef: "treble", keys: ["e##/5"], duration: "8d" }).
-             addAccidental(0, new VF.Accidental("##")).addDotToAll(),
-
-             new VF.StaveNote({clef: "treble", keys: ["eb/5"], duration: "16" }).
-             addAccidental(0, new VF.Accidental("b")),
-
-             new VF.StaveNote({clef: "treble", keys: ["d/5", "eb/4"], duration: "h" }).
-             addDot(0),
-
-             new VF.StaveNote({clef: "treble", keys: ["c/5", "eb/5", "g#/5"], duration: "q" }).
-             addAccidental(1, new VF.Accidental("b")).
-             addAccidental(2, new VF.Accidental("#")).addDotToAll()
-         ];
-
-         VF.Formatter.FormatAndDraw(context, stave, notes);*/
-    });
-    var notes = [];
-
-    $("#test").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-        var note = new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "w"});
-
-        notes.push(note);
-
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-    $("#test0").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-        var note = new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "h"});
-
-        notes.push(note);
-
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-
-    $('#test1').click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-        var note = new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "q"});
-
-        notes.push(note);
-
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-    $("#test2").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-        var note = new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "8d"});
-
-        notes.push(note);
-
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-    $("#test3").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-        var note = new VF.StaveNote({clef: "treble", keys: ["c/4"], duration: "16"});
-
-        notes.push(note);
-
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-    
-    $("#up").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-        var note = notes[notes.length-1];
-        var type = note.duration;
-
-
-        if (note!=undefined){
-            var keys = note.getKeys();
-            var change = getUpOrDownNoteName(keys[0],"up",1);
-            //console.log(typeof keys);
-           // console.log(keys);
-            var noteName = keys[0].charAt(0);
-            var octave = keys[0].charAt(keys[0].length-1);
-
-            var cKey = (keys[0].replace(noteName,change.charAt(0)));
-            cKey = (cKey.replace(octave,change.charAt(1)));
-            var note1 = new VF.StaveNote({clef: "treble", keys: [cKey], duration: type});
-            notes[notes.length-1] = note1;
-            VF.Formatter.FormatAndDraw(context, stave, notes);
-            notes.forEach(function (b) {
-                b.setContext(context).draw();
-            });
-        }
-    });
-    
-    $("#down").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-        var note = notes[notes.length-1];
-        var type = note.duration;
-
-        if (note!=undefined){
-            var keys = note.getKeys();
-            var change = getUpOrDownNoteName(keys[0],"down",1);
-            console.log("huanghai-->"+change);
-          //  console.log(keys);
-            var noteName = keys[0].charAt(0);
-            var octave = keys[0].charAt(keys[0].length-1);
-            var cKey = (keys[0].replace(noteName,change.charAt(0)));
-            cKey = (cKey.replace(octave,change.charAt(1)));
-            var note1 = new VF.StaveNote({clef: "treble", keys: [cKey], duration: type});
-
-            notes[notes.length-1] = note1;
-            VF.Formatter.FormatAndDraw(context, stave, notes);
-            notes.forEach(function (b) {
-                b.setContext(context).draw()
-            });
-        }
-    });
-
-    $("#clear").click(function () {
-        notes = [];
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-
-
-    });
-    $("#delete").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
-        notes.splice(notes.length-1,1);
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-        notes.forEach(function (b) {
-            b.setContext(context).draw()
-        });
-    });
-
-    
-    $("#submit").click(function () {
-        var text = $("#input").val();
-        console.log("text-->"+text);
-        if (text==""){
-            return;
-        }else {
-            var arr = text.split(":");
-            var inputType = parseInt(arr[0]);
-            var keys = [];
-            for (var x=1;x<arr.length;x++){
-                keys.push(arr[x].charAt(0)+"/"+arr[x].charAt(1));
-            }
-            var type = "q";
-            switch (inputType){
-                case 0:
-                    type = "w";
-                    break;
-                case 2:
-                    type = "h";
-                    break;
-                case 4:
-                    type = "q";
-                    break;
-                case 8:
-                    type = "8d";
-                    break;
-                case 16:
-                    type = "16";
-                    break;
-            }
-
-            VF = Vex.Flow;
-            var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-            renderer.resize(1000, 500);
-            var context = renderer.getContext();
-            var stave = new VF.Stave(10, 50, 400);
-            stave.addClef("treble").addTimeSignature("4/4");
-
-            stave.setRepetitionTypeLeft(8,0,0);
-            stave.setSection(1,0);
-
-           // stave.setNumLines(100);100线谱
-          //  stave.setConfigForLine(10);//The line number must be within the range of the number of lines in the Stave
-           // stave.setText("你好",new ,[]);
-            //stave.setTempo(1,0);//不好用
-            stave.addModifier(new VF.Barline(3));
-            stave.setContext(context).draw();
-
-
-            var note = new VF.StaveNote({clef: "treble", keys:keys, duration: type});
-
-            notes.push(note);
-
-            VF.Formatter.FormatAndDraw(context, stave, notes);
-
-
-
-
-            var stave1 = new VF.Stave(410, 50, 400);
-
-            stave1.setContext(context).draw();
-            //notes.push(note);
-
-            VF.Formatter.FormatAndDraw(context, stave1, notes);
-            notes.forEach(function (b) {
-                b.setContext(context).draw();
-            });
-
-
-        }
-    });
-    function getUpOrDownNoteName(key,direction,step) {
-        console.log(key);
-        var dic = ["c","d","e","f","g","a","b"];
-
-        var noteName = key.charAt(0);
-        var octave = key.charAt(key.length-1);
-        var time = 0;
-        var stepIndex = 0;
-        var isStart = false;
-        var noteNameResult;
-        var octaveResult = parseInt(octave);
-        if (direction=="up"){
-            for (var x=0;x<dic.length;x++){
-                console.log("-----------------x---------------"+x);
-                var value = dic[x];
-                if (stepIndex==step){
-                    noteNameResult = value;
-                    octaveResult += time;
-                    break;
-                }
-                if (noteName==value){
-                    console.log("value-->"+value);
-                    isStart = true;
-                }
-                if (isStart){
-                    console.log("x-->"+x);
-                    stepIndex++;
-                }
-                if (x==dic.length-1){
-                    x=0;
-                    time++;
-                }
-            }
-        }else {
-            for (var x=dic.length-1;x>=0;x--){
-                var value = dic[x];
-                if (stepIndex==step){
-                    noteNameResult = value;
-                    octaveResult += time;
-                    break;
-                }
-                if (noteName==value){
-                    isStart = true;
-                }
-                if (isStart){
-                    stepIndex++;
-                }
-                if (x==0){
-                    x=dic.length-1;
-                    time--;
-
-                }
+    /*document.addEventListener('touchmove', function (event) {
+        if (event.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!event.defaultPrevented) {
+                event.preventDefault();
             }
         }
+    }, false);*/
+
+    /*$(document).swipeUp(function () {
+        if (isAnimating) return;
+        last.row = now.row;
+        last.col = now.col;
+        if (last.row != 4) {
+            now.row = last.row + 1;
+            now.col = 1;
+            pageMove(towards.up);
+        }
+    })*/
+
+    /**
+     * 触屏事件，页面数在这里修改
+     */
+    $("body").swipe({
+        left: function () {
+            console.log('向左运动');
+        },
+        right: function () {
+            console.log('向右运动');
+        },
+        up: function () {
+            if (isAnimating) return;
+            last.row = now.row;
+            last.col = now.col;
+            if (last.row != 4) {
+                now.row = last.row + 1;
+                now.col = 1;
+                pageMove(towards.up);
+            }else {
+
+            }
+        },
+        down: function () {
+            if (isAnimating) return;
+            last.row = now.row;
+            last.col = now.col;
+            if (last.row != 1) {
+                now.row = last.row - 1;
+                now.col = 1;
+                pageMove(towards.down);
+            }
+        }
+    });
 
 
-        console.log(noteNameResult+""+octaveResult);
-        return noteNameResult+""+octaveResult;
+    /**
+     * 触屏调用方法
+     * @param tw
+     */
+    function pageMove(tw) {
+        var lastPage = ".page-" + last.row + "-" + last.col,
+            nowPage = ".page-" + now.row + "-" + now.col;
+
+        switch (tw) {
+            case towards.up:
+                outClass = 'pt-page-moveToTop';
+                inClass = 'pt-page-moveFromBottom';
+                break;
+            case towards.right:
+                outClass = 'pt-page-moveToRight';
+                inClass = 'pt-page-moveFromLeft';
+                break;
+            case towards.down:
+                outClass = 'pt-page-moveToBottom';
+                inClass = 'pt-page-moveFromTop';
+                break;
+            case towards.left:
+                outClass = 'pt-page-moveToLeft';
+                inClass = 'pt-page-moveFromRight';
+                break;
+        }
+        isAnimating = true;
+        $(nowPage).removeClass("hide");
+
+        $(lastPage).addClass(outClass);
+        $(nowPage).addClass(inClass);
+
+        setTimeout(function () {
+            $(lastPage).removeClass('page-current');
+            $(lastPage).removeClass(outClass);
+            $(lastPage).addClass("hide");
+            $(lastPage).find("img").addClass("hide");
+
+            $(nowPage).addClass('page-current');
+            $(nowPage).removeClass(inClass);
+            $(nowPage).find("img").removeClass("hide");
+
+            isAnimating = false;
+        }, 600);
     }
-    
-    
-    $("#test4").click(function () {
-        VF = Vex.Flow;
-        var renderer = new VF.Renderer(div, VF.Renderer.Backends.CANVAS);
-        renderer.resize(1000, 500);
-        var context = renderer.getContext();
-        var stave = new VF.Stave(10, 40, 400);
-        stave.addClef("treble").addTimeSignature("4/4");
-        stave.setContext(context).draw();
+
+    /**
+     * 生成按钮
+     */
+    $("#submit").click(function () {
+        console.log("处理图片");
+        var name = $("#in1").val();
+        if (name===""){
+            alert("请输入祝福者");
+            return;
+        }
+        $(".share_number").text(shareNumber);
+        $(".render_text").text(name);
+        $("#erweima").removeClass("hide");
 
 
-        console.log(stave);
+        $(".input_container").addClass("hide");
+        $("#submit").removeClass("btn");
+        $("#submit").removeClass("btn-info");
+        $("#submit").addClass("hide");
+
+        $("#submit").css({
+            "color":'#ffffff',
+            "left":"0",
+            "right": "0",
+            "margin":"0 auto",
+            "width":"auto",
+            "text-align":"center"
+        });
+
+        var shareContent = document.getElementById("targetDom");
+        var width = shareContent.offsetWidth;
+        var height = shareContent.offsetHeight;
+        var canvas = document.createElement("canvas");
+        var scale = 2;
+
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+        canvas.getContext("2d").scale(scale, scale);
+
+        var opts = {
+            scale: scale,
+            canvas: canvas,
+            logging: true,
+            width: width,
+            height: height
+        };
+        html2canvas(shareContent,opts).then(function (canvas) {
+
+
+
+            //document.getElementById("targetDom").appendChild(canvas);
+            var imgContent = document.getElementById("img");
+            var img = Canvas2Image.convertToImage(canvas, canvas.width, canvas.height);
+            //$(img).addClass("zimg");
+           // window.location.href = "http://zhounianqing.myhuanghai.com/img.html?data="+dataImg;
+          //  window.location.href = "http://www.beidu.com";
+
+            $(img).css({
+                "width": canvas.width / 2 + "px",
+                "height": canvas.height / 2 + "px"
+            });
+
+
+            imgContent.appendChild(img);
+            $("#img").css({
+                "width": canvas.width / 2 + "px",
+                "height": canvas.height / 2 + "px"
+            });
+            $("#save_note").removeClass("hide");
+            $("#save_note").addClass("flash");
+        });
 
     });
-    
-    
-    $("#easyscore").click(function () {
-        console.log("huanghai");
-        var vf = new Vex.Flow.Factory({renderer: {elementId: 'div',width:2000,height: 500}});
-        console.log(vf);
-        var score = vf.EasyScore();
-        console.log(score);
-        var system = vf.System();
-        console.log(system);
-        //console.log(vf.getOptions());
 
-
-        var stave = system.addStave({
-            voices: [
-                score.voice(score.notes('C#5/8, B4, A4, G#4, B4, A4, G#4, G#4', {stem: 'up'})),
-                score.voice(score.notes('C#4/h, C#4', {stem: 'down'})),
-            ]
-        }).addClef('treble').addTimeSignature('4/4');
-        stave.setMeasure(10);
-        system.addStave({
-            voices: [
-                score.voice(score.notes('C#3/q, B2, A2/8, B2, C#3, D3', {clef: 'bass', stem: 'up'})),
-                score.voice(score.notes('C#2/h, C#2', {clef: 'bass', stem: 'down'}))
-            ]
-        }).addClef('bass').addTimeSignature('4/4');
-
-        system.addStave({
-            voices: [
-                score.voice(score.notes('C#3/q, B2, A2/8, B2, C#3, D3', {clef: 'bass', stem: 'up'})),
-                score.voice(score.notes('C#2/h, C#2', {clef: 'bass', stem: 'down'}))
-            ]
-        }).addClef('bass').addTimeSignature('4/4');
-        system.addConnector();
-
-
-        //vf.draw();
-
-        // vf.reset();
-        console.log(stave);
-
-
-        vf.draw();
-       // stave.setContext(context).draw();
-        stave.addModifier(new VF.Barline(2))
-        vf.draw();
-
+    /*var HEIGHT = $(document).height();
+    $(window).resize(function() {
+        //alert(HEIGHT);
+        $("#fip").height(HEIGHT);
+    });*/
+    $("#in1").focus(function () {
+        //$("#submit").tran("hide");
+       // $("#submit").addClass("hide");
+        $('#submit').attr("disabled",true);
+        $('#submit').text("请关闭输入法并点击页面");
+        $('.page').height(screenHeight);
+    });
+    $("#in1").blur(function () {
+        //$("#submit").removeClass("hide");
+        $('#submit').attr("disabled",false);
+        $('#submit').text("点击生成祝福");
     });
 
-});
+})();
 
 
 
+var b = true;
+var audio = document.getElementById("musicfx");
+var div_img = document.getElementById("div_music");
+//var audio = $('#musicfx');
+//var img = $('#img_music');
+/**
+ * 音乐图标点击事件
+ */
+function musicClick() {
+    //var audio = $(audio);
+    if (b) {
+        audio.pause();
+        div_img.style.webkitAnimation = 'normal';
+
+
+    } else {
+        audio.play();
+        div_img.style.webkitAnimation = 'circle 4s infinite linear';
+    }
+    b = !b;
+
+}
+
+var shareNumber = "123656";
+
+/**
+ * 请求 访问id 接口
+ */
+function loadShareNumber() {
+
+    //  alert("haha")
+    console.log("请求")
+    $.ajax({
+        url:'https://www.myhuanghai.com/index.php/index/index/caclsharenumber',
+        data:{'name':'haha'},
+        crossDomain:true,
+        type:'POST',
+
+        error:function (data) {
+            console.dir(data)
+        },
+        success:function(data){
+            console.dir(data)
+            //span.hide()
+            shareNumber = data.data;
+            $(".share_number").text(shareNumber);
+            if(data.status == '1'){
+                //alert(data.data)
+            } else{
+                //  alert(data.data)
+
+            }
+        }
+    });
+}
 

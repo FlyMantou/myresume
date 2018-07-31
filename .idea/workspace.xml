@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed99255f-8476-4b47-a1f3-af5f2ca8ceb2" name="Default" comment="" />
+    <list default="true" id="ed99255f-8476-4b47-a1f3-af5f2ca8ceb2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/bg.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/icon_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/music_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p1i1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p1i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p1i3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p2i1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p2i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p3i1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p3i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p4i1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p4i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p5i1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p5i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p5i3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p5i4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/save_note.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/animations.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/rz.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/canvas2image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/html2canvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.swipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/rem.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/snow-plugin.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/2b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/2s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/3b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/3s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/4b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/4s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/5b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/5s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/6b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/6s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/7b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/7s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/index2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/vexflow-debug.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,14 +74,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="175">
+              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -36,11 +98,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="440" />
-    <option name="y" value="38" />
+    <option name="x" value="302" />
+    <option name="y" value="27" />
     <option name="width" value="1332" />
     <option name="height" value="939" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -188,15 +251,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533024674812</updated>
-      <workItem from="1533024677624" duration="76000" />
+      <workItem from="1533024677624" duration="478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76000" />
+    <option name="totallyTimeSpent" value="478000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="440" y="38" width="1332" height="939" extended-state="0" />
+    <frame x="302" y="27" width="1332" height="939" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -205,8 +268,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -239,8 +303,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="175">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>
