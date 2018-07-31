@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试vexflow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Content here -->
+
+    <canvas id="boo" style="border:1px solid #000000;"></canvas>
+    <br/>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-info active" id="show_staff">
+            <input type="radio" hidden name="staffline" checked>
+            显示五线
+        </label>
+        <label class="btn btn-info" id="hide_staff">
+            <input type="radio" hidden name="staffline">
+            隐藏五线
+        </label>
+    </div>
+
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-info active" id="tb_staff">
+            <input type="radio" hidden name="clef" checked>
+            高低音谱号&双谱表
+        </label>
+        <label class="btn btn-info" id="t_staff">
+            <input type="radio" hidden name="clef">
+            高音谱号&单谱表
+        </label>
+        <label class="btn btn-info" id="b_staff">
+            <input type="radio" hidden name="clef">低音谱号&单谱表
+
+        </label>
+        <label class="btn btn-info" id="a_staff">
+            <input type="radio" hidden name="clef">
+            中音谱号&单谱表
+        </label>
+    </div>
+
+    <h5>调号：</h5>
+
+    <div class="btn-group" data-toggle="buttons">
+        <div class=".row">
+            <label class="btn btn-info active" id="key0">
+                <input type="radio" hidden name="keysig" checked>
+                <img class="clef_img" src="img/0.png">
+            </label>
+            <label class="btn btn-info" id="key1b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/1b.png">
+            </label>
+            <label class="btn btn-info" id="key2b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/2b.png">
+            </label>
+            <label class="btn btn-info" id="key3b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/3b.png">
+            </label>
+            <label class="btn btn-info" id="key4b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/4b.png">
+            </label>
+            <label class="btn btn-info" id="key5b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/5b.png">
+            </label>
+            <label class="btn btn-info" id="key6b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/6b.png">
+            </label>
+            <label class="btn btn-info" id="key7b">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/7b.png">
+            </label>
+            <label class="btn btn-info" id="key1s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/1s.png">
+            </label>
+            <label class="btn btn-info" id="key2s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/2s.png">
+            </label>
+            <label class="btn btn-info" id="key3s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/3s.png">
+            </label>
+            <label class="btn btn-info" id="key4s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/4s.png">
+            </label>
+            <label class="btn btn-info" id="key5s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/5s.png">
+            </label>
+            <label class="btn btn-info" id="key6s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/6s.png">
+            </label>
+            <label class="btn btn-info" id="key7s">
+                <input type="radio" hidden name="keysig">
+                <img class="clef_img" src="img/7s.png">
+            </label>
+        </div>
+
+    </div>
+
+
+    <h5>拍号：</h5>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-info" id="hide_timesig">
+            <input type="radio" hidden name="timesig">
+            无
+        </label>
+        <label class="btn btn-info active" id="show_timesig">
+            <input type="radio" hidden name="timesig" checked>
+            有：
+            <input type="text" value="4/4" id="timesig_input">
+            输入格式：3/4
+        </label>
+    </div>
+
+
+    <h5>音符：</h5>
+    <div class="btn-group" data-toggle="buttons" id="note_choose">
+            <div class=".row">
+            <label class="btn btn-info" id="note_0">
+                <input type="radio" hidden name="note" value="w">
+                全音符
+            </label>
+            <label class="btn btn-info" id="note_2">
+                <input type="radio" hidden name="note" value="h">
+                二分音符
+            </label>
+            <label class="btn btn-info active" id="note_4">
+                <input type="radio" hidden name="note" checked value="4">
+                四分音符
+            </label>
+            <label class="btn btn-info" id="note_8">
+                <input type="radio" hidden name="note" value="8">
+                八分音符
+            </label>
+            <label class="btn btn-info" id="note_16">
+                <input type="radio" hidden name="note" value="16">
+                十六分音符
+            </label>
+            <label class="btn btn-info" id="note_32">
+                <input type="radio" hidden name="note" value="32">
+                三十二分音符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="64">
+                六十四分音符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="wr">
+                全休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="hr">
+                二分休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="qr">
+                四分休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="8r">
+                八分休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="16r">
+                十六分休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="32r">
+                三十二分休止符
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" hidden name="note" value="64r">
+                六十四分休止符
+            </label>
+        </div>
+
+    </div>
+
+    <h5>附属符号：</h5>
+    <div class="btn-group" data-toggle="buttons" id="acc">
+        <label class="btn btn-info active">
+            <input type="radio" hidden name="acc1" checked value="0">
+            无
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc1" value="n">
+            ♮
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc1" value="b">
+            ♭
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc1" value="bb">
+            ♭♭
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc1" value="#">
+            ♯
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc1" value="##">
+            ♯♯
+        </label>
+    </div>
+
+    <div class="btn-group" data-toggle="buttons" id="dot">
+        <label class="btn btn-info active">
+            <input type="radio" hidden name="acc2" checked value="0">
+            无
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc2" value="1">
+            .
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="acc2" value="2">
+            ..
+        </label>
+    </div>
+    <h5>插入、删除或移动音符在：</h5>
+    <div class="btn-group" data-toggle="buttons" id="lines">
+        <label class="btn btn-info active">
+            <input type="radio" hidden name="line" checked value="1">
+            第一行
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" hidden name="line" value="2">
+            第二行
+        </label>
+
+    </div>
+
+
+    <h5>按钮区：</h5>
+    <div class="btn btn-success" id="up">↑</div>
+    <div class="btn btn-success" id="down">↓</div>
+    <div class="btn btn-success" id="left">←</div>
+    <div class="btn btn-success" id="right">→</div>
+    <div class="btn btn-success" id="cursor_left">◀◀</div>
+    <div class="btn btn-success" id="cursor_right">▶▶</div>
+    <div class="btn btn-success" id="add_note">插入音符</div>
+    <div class="btn btn-success" id="add_chord">插入音符</div>
+    <div class="btn btn-success" id="remove_note">删除音符</div>
+    <div class="btn btn-success" id="add_barline">增加小节线</div>
+    <div class="btn btn-success" id="remove_barline">删除小节线</div>
+</div>
+
+
+
+
+<script src="js/vexflow-debug.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="js/index2.js"></script>
+</body>
+
+
+</html>
