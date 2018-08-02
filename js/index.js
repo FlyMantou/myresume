@@ -48,7 +48,7 @@
             if (isAnimating) return;
             last.row = now.row;
             last.col = now.col;
-            if (last.row !== 4) {
+            if (last.row !== 8) {
                 now.row = last.row + 1;
                 now.col = 1;
                 pageMove(towards.up);

@@ -166,186 +166,98 @@ body {
 }
 
 .page-2-1 .img_1 {
-    width: 1.22rem;
-    height: 2.5rem;
+    width: 2.39rem;
     position: absolute;
-    right: 1.39rem;
-    top: 2.27rem;
+    left: 0.5rem;
+    top: 2.5rem;
 }
 
 .page-2-1 .img_2 {
-    width: 1.69rem;
-    height: 5.87rem;
+    width: 3.3rem;
     position: absolute;
-    left: 1.04rem;
+    left: 0.5rem;
     top: 3rem;
+
+    /*top:13%;*/
+}
+.page-2-1 .img_3 {
+    width: 3.89rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 3.5rem;
 
     /*top:13%;*/
 }
 
 .page-3-1 .img_1 {
-    width: 1.23rem;
-    height: 6.14rem;
+    width: 4.63rem;
     position: absolute;
-    right: 1.48rem;
-    top: 1.61rem;
+    left: 0.5rem;
+    top: 2.5rem;
 }
 
 .page-3-1 .img_2 {
-    width: 1.22rem;
-    height: 5.28rem;
+    width: 5.11rem;
     position: absolute;
-    left: 1.19rem;
-    top: 2.2rem;
+    left: 0.5rem;
+    top: 5rem;
 }
 
-.page-4-1 .div_btn {
-    color: white;
-    position: fixed;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0.2rem;
-    width: 3.2rem;
-    z-index: 50;
-    text-align: center;
-}
-
-.page-4-1 .content {
-    position: absolute;
-    top: 4rem;
-    left: 50%;
-    height: 40%;
-    width: 90%;
-    margin: -35% 0 0 -45%;
-}
-
-.img_container {
-    position: relative;
-    display: block;
-    width: 90%;
-    height: auto;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 30%;
-}
-
-.share_number {
-    color: red;
-    position: absolute;
-    right: 0;
-    margin: 0 auto;
-    left: -10%;
-    top: -0.2rem;
-    font-size: 0.6rem;
-}
-
-.render_text {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    color: #000;
-    font-size: 0.4rem;
-    top: 2rem;
-}
-
-.input_container {
-
-    position: relative;
-    top: 50%;
-    left: 50%;
-    height: 18%;
-    width: 50%;
-    margin: -9% 0 0 -25%;
-    z-index: 100;
-
-}
-
-.form-control {
-    width: 100%;
-    height: 100%;
-}
 
 .page-4-1 .img_1 {
-    position: relative;
-    width: 1.4rem;
-    height: 0.46rem;
-    float: left;
-    margin-left: 0.20rem;
+    position: absolute;
+    width: 5.09rem;
+    left: 0.5rem;
+    top:2.5rem;
 
 }
 
 .page-4-1 .img_2 {
-    position: relative;
-    width: 1.9rem;
-    height: 0.46rem;
-    float: right;
-    margin-right: 0.2rem;
+    width: 5.10rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 5rem;
 }
 
-.page-4-1 .img_3 {
-    position: relative;
-    height: 1.17rem;
-    width: 95%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 3rem;
+
+.page-5-1 .img_1 {
+    position: absolute;
+    width: 5.09rem;
+    left: 0.5rem;
+    top:2.5rem;
+
 }
 
-.page-4-1 .img_4 {
-    height: 1.33rem;
-    width: 6.4rem;
+.page-5-1 .img_2 {
+    width: 5.10rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 5rem;
+}
+
+.page-6-1 .img_1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.page-6-1 .img-pro {
+    height: 0.3rem;width: auto;
+    margin: 0.1rem;
+}
+
+.page-7-1 .img_1 {
+    margin-top: 0.5rem;
+}
+
+
+.page-8-1 .img_1 {
+    width: 5rem;height: auto;
+    top: 4rem;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0.2rem;
     margin: 0 auto;
 }
 
-.page-4-1 .img_7 {
-    height: auto;
-    width: 90%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 7%;
-    margin: 0 auto;
-
-}
-
-#save_note {
-    color: red;
-    width: 50%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    bottom: 2rem;
-    z-index: 33;
-}
-
-#save_img {
-    width: 100%;
-    height: auto;
-}
-
-/**
-生成截图后的容器
- */
-.zimg {
-    z-index: 32;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-/**
-输入框容器
- */
 
 .flash {
     -webkit-animation: twinkling 2s infinite ease-in-out;
@@ -404,4 +316,57 @@ body {
     }
 
 }
+
+
+.progress{
+    height: 25px;
+    background: #262626;
+    padding: 5px;
+    overflow: visible;
+    border-radius: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #7992a8;
+    margin-top: 50px;
+}
+.progress .progress-bar{
+    border-radius: 20px;
+    position: relative;
+    animation: animate-positive 2s;
+}
+.progress .progress-value{
+    display: block;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 4px;
+    background: #191919;
+    border: 1px solid #000;
+    position: absolute;
+    top: -40px;
+    right: -10px;
+}
+.progress .progress-value:after{
+    content: "";
+    border-top: 10px solid #191919;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -6px;
+    left: 26%;
+}
+.progress-bar.active{
+    animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+}
+.language-text{
+    color: white;
+    font-size: 0.3rem;
+    padding-top: 0.8rem;
+}
+
 
