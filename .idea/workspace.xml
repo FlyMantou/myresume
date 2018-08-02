@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed99255f-8476-4b47-a1f3-af5f2ca8ceb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p2i3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p6i9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p7i1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/p8i1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p2i1.png" afterPath="$PROJECT_DIR$/img/p2i1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p2i2.png" afterPath="$PROJECT_DIR$/img/p2i2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p3i1.png" afterPath="$PROJECT_DIR$/img/p3i1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p3i2.png" afterPath="$PROJECT_DIR$/img/p3i2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p4i1.png" afterPath="$PROJECT_DIR$/img/p4i1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p4i2.png" afterPath="$PROJECT_DIR$/img/p4i2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p5i1.png" afterPath="$PROJECT_DIR$/img/p5i1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p5i2.png" afterPath="$PROJECT_DIR$/img/p5i2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/screen.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,6 +29,19 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="150">
+                <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -106,6 +92,7 @@
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -116,8 +103,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="404" />
-    <option name="y" value="89" />
+    <option name="x" value="497" />
+    <option name="y" value="62" />
     <option name="width" value="1332" />
     <option name="height" value="888" />
   </component>
@@ -147,16 +134,6 @@
             <path>
               <item name="myresume" type="b2602c69:ProjectViewProjectNode" />
               <item name="myresume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myresume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myresume" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myresume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myresume" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myresume" type="b2602c69:ProjectViewProjectNode" />
@@ -289,7 +266,7 @@
       <updated>1533024674812</updated>
       <workItem from="1533024677624" duration="6379000" />
       <workItem from="1533086384631" duration="4493000" />
-      <workItem from="1533173857745" duration="8763000" />
+      <workItem from="1533173857745" duration="9719000" />
     </task>
     <task id="LOCAL-00001" summary="勿忘初心">
       <created>1533025201218</created>
@@ -305,14 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533030765931</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成">
+      <created>1533198988510</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1533198988510</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19635000" />
+    <option name="totallyTimeSpent" value="20591000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="404" y="89" width="1332" height="888" extended-state="0" />
+    <frame x="497" y="62" width="1332" height="888" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -321,8 +305,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -352,7 +336,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="勿忘初心" />
     <MESSAGE value="背景，音乐，首页动画" />
-    <option name="LAST_COMMIT_MESSAGE" value="背景，音乐，首页动画" />
+    <MESSAGE value="完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -385,8 +370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -395,6 +380,17 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
