@@ -8,7 +8,7 @@
     var now = {row: 1, col: 1}, last = {row: 0, col: 0};
     towards = {up: 1, right: 2, down: 3, left: 4};
     var isAnimating = false;
-
+    var pageNum = 8;
     s = window.innerHeight / 500;
     ss = 250 * (1 - s);
 
@@ -48,9 +48,10 @@
             if (isAnimating) return;
             last.row = now.row;
             last.col = now.col;
-            if (last.row !== 8) {
+            if (last.row !== pageNum) {
                 now.row = last.row + 1;
                 now.col = 1;
+                $("#page-num").text(now.row+"页/共"+pageNum+"页");
                 pageMove(towards.up);
 
             }else {
@@ -71,6 +72,7 @@
             if (last.row !== 1) {
                 now.row = last.row - 1;
                 now.col = 1;
+                $("#page-num").text(now.row+"页/共"+pageNum+"页");
                 pageMove(towards.down);
             }else {
 
@@ -252,6 +254,15 @@ function musicClick() {
     b = !b;
 
 }
+
+document.onreadystatechange = loadingChange;//当页面加载状态改变的时候执行这个方法.
+function loadingChange() {
+    if (document.readyState == "complete") { //当页面加载状态为完全结束时进入
+        $(".load-container").hide();//当页面加载完成后将loading页隐藏
+    }
+}
+
+
 
 var shareNumber = "123656";
 

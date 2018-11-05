@@ -68,14 +68,14 @@
 .pt-page-fadeIn1s2s {
 	-webkit-animation: fadeIn 6s ease both;
 	animation: fadeIn 6s ease both;
-	animation-delay:3s;
-	-webkit-animation-delay:3s;
+	animation-delay:2s;
+	-webkit-animation-delay:2s;
 }
 .pt-page-fadeIn1s3s {
 	-webkit-animation: fadeIn 6s ease both;
 	animation: fadeIn 6s ease both;
-	animation-delay:5s;
-	-webkit-animation-delay:5s;
+	animation-delay:3s;
+	-webkit-animation-delay:3s;
 }
 
 /* move from / to and fade */
